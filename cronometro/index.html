@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stype.css">
+    <title>Meu primeiro projeto em repositorio</title>
+</head>
+<body>
+    <div class="container">
+       <header class="header">
+        <h1>Cronometro</h1>
+        <p id="saudaçao"></p>  
+    </header>
+    <main class="main">
+        <div class="contador">
+            <ul>
+                <li><span id="hora">00</span>
+                    <p id="contador-paragrafo1">Horas</p></li>
+                <li><span id="minuto">00</span>
+                    <p id="contador-paragrafo2">Minutos</p></li>
+                <li><span id="segundo">00</span>
+                    <p id="contador-paragrafo3">Segundos</p></li>
+            </ul>
+        </div>
+        <div class="icones">
+            <button id="play" onclick="play()"><img src="icones/botao-play-ponta-de-seta (1).png" alt="" id="icones-play"></button>
+            <button id="stop" onclick="pausar()"><img src="icones/pausa (1).png" alt=""></button>
+            <button id="reset" onclick="reset()"><img src="icones/rotating-arrow-symbol.png" alt=""></button>
+
+        </div>
+    </main>
+    </div>
+    <script src="funcion.js"></script>
+</body>
+</html>
