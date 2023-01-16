@@ -14,7 +14,7 @@
             margin-left: 550px;
             background: white;
             width: 400px;
-            height: 200px;
+            height: 400px;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.384);
@@ -27,17 +27,25 @@
 </head>
 <body>
     <div class="container">
+        <h1>Caso a bala seja = 6<br>Você morre! </h1>
+
         <input type="button" value="Clikar" onclick="clikar()" >
+        <p id="bala"></p>
         <p id="res"></p>
     </div>
     <script>
         function clikar(){
             let res = document.getElementById('res')
+            let bala = document.getElementById('bala')
             let fodeu = Math.floor(Math.random() * 7)
             if(fodeu === 6){
+                res.style.color = "red"
                 res.innerHTML = 'Morreu meu chapa'
+                bala.innerHTML = `bala de numero ${fodeu}`
             }else{
-                res.innerHTML = 'Viveu eu chapa'
+                res.style.color = "black"
+                res.innerHTML = 'Viveu meu chapa'
+                bala.innerHTML = `bala de numero ${fodeu}`
             }
             
         }
