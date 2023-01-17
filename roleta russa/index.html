@@ -7,55 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <title>ROleta russa</title>
+    <title>Roleta russa</title>
 </head>
 
 <body>
-
-
     <div class="container">
-        <h1 id="placartxt">Roud vivos =<span id="placar">0</span></h1>
-        <h1>Caso a bala seja = 6<br>Você morre! </h1>
+        <div class="gamer">
+            <h1 id="placartxt">Rounds vivos =<span id="placar">0</span></h1>
+            <h1>Caso a bala seja = 6<br>Você morre! </h1>
+            <input type="button" class="btn btn-red" value="Clicar" onclick="clicar()">
+        </div>
 
-        <input type="button" class="btn btn-red" value="Clicar" onclick="clicar()">
-        
+        <div class="txt">
+            <p id="bala"></p>
+            <p id="res"></p><br>
+            <p id="pontos"></p>
+        </div>
     </div>
-    <div class="container2">
-        <p id="bala"></p>
-        <p id="res"></p><br>
-        <p id="pontos"></p>
-        <p id="placares"></p>
-    </div>
-    <script>
-        let res = document.getElementById('res')
-        let bala = document.getElementById('bala')
-        let placar = document.getElementById('placar')
-        let pontos = document.getElementById('pontos')
-        let placares = document.getElementById('placares')
-        let play = 1
-        let fodeu;
-        let cont = 0
-        function clicar() {
-            fodeu = Math.floor(Math.random() * 6 + 1)
-            if (fodeu === 6) {
-                res.style.color = "red"
-                pontos.innerHTML = `Roudes vivo = ${cont}`
-                placares.innerHTML += `placar do jogador ${play++} = ${cont}<br>`
-                placar. innerHTML = '0'
-                cont = 0
-                res.innerHTML = 'Morreu meu chapa'
-                bala.innerHTML = `bala de numero ${fodeu}`
-            } else {
-                pontos.innerHTML =''
-                cont++
-                placar.innerHTML = cont + 0
-                res.style.color = "black"
-                res.innerHTML = 'Viveu meu chapa'
-                bala.innerHTML = `bala de numero ${fodeu}`
-            }
-
-        }
-    </script>
+    <script src="funcao.js"></script>
 </body>
 
 </html>
